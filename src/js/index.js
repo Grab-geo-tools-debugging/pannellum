@@ -1,6 +1,6 @@
 'use strict';
 
-require("./requestAnimationFrame");
+require("./RequestAnimationFrame");
 require("./libpannellum");
 require("./pannellum");
 
