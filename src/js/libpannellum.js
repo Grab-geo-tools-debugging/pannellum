@@ -72,7 +72,7 @@ function Renderer(container) {
             console.log('Error: invalid image type specified!');
             throw {type: 'config error'};
         }
-
+        console.log('==============', 'abc', '==============')
         imageType = _imageType;
         image = _image;
         dynamic = _dynamic;
