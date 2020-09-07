@@ -518,7 +518,6 @@ function onImageLoad() {
  */
 function parseGPanoXMP(image) {
     var reader = new FileReader();
-    console.log(image, '124321423', 'parseGPanoXMP')
     reader.addEventListener('loadend', function() {
         var img = reader.result;
 
