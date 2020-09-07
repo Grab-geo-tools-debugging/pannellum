@@ -72,7 +72,7 @@ function Renderer(container) {
             console.log('Error: invalid image type specified!');
             throw {type: 'config error'};
         }
-
+        console.log('==============', 'abc', '==============')
         imageType = _imageType;
         image = _image;
         dynamic = _dynamic;
@@ -197,7 +197,8 @@ function Renderer(container) {
                 faceContext.drawImage(this, 2, 2);
                 var imgData = faceContext.getImageData(0, 0, faceCanvas.width, faceCanvas.height);
                 var data = imgData.data;
-                
+                faceContext.putImageData(imgData, 0, 0);
+                console.log("abc", 12342432, '-----')
                 // Duplicate edge pixels
                 var i;
                 var j;
@@ -239,7 +240,7 @@ function Renderer(container) {
                 }
                 
                 // Draw image width duplicated edge pixels on canvas
-                faceContext.putImageData(imgData, 0, 0);
+                // faceContext.putImageData(imgData, 0, 0);
                 
                 incLoaded.call(this);
             };
