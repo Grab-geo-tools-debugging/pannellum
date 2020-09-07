@@ -298,6 +298,10 @@ function Renderer(container) {
         if (imageType == 'equirectangular') {
             width = Math.max(image.width, image.height);
             maxWidth = gl.getParameter(gl.MAX_TEXTURE_SIZE);
+            console.log(maxWidth)
+            if (width > maxWidth) {
+                width = maxWidth
+            }
         } else if (imageType == 'cubemap') {
             width = cubeImgWidth;
             maxWidth = gl.getParameter(gl.MAX_CUBE_MAP_TEXTURE_SIZE);
