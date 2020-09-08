@@ -1595,6 +1595,12 @@ function renderInit() {
             params.horizonRoll = config.horizonRoll * Math.PI / 180;
         if (config.backgroundColor !== undefined)
             params.backgroundColor = config.backgroundColor;
+        if (panoImage.width > 5200) {
+            panoImage.width = 5200
+        }
+        if (panoImage.height > 5200) {
+            panoImage.height = 5200
+        }
         renderer.init(panoImage, config.type, config.dynamic, config.haov * Math.PI / 180, config.vaov * Math.PI / 180, config.vOffset * Math.PI / 180, renderInitCallback, params);
         if (config.dynamic !== true) {
             // Allow image to be garbage collected
